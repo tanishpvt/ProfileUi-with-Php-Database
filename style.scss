@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.css__container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 30px;
+    background: rgb(228, 228, 228);
+}
+
+.prof{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__primary,&__secondory{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &__primary{
+        color: rgb(126, 126, 126);
+    }
+    &__secondory{
+        color: rgb(61, 61, 61);
+    }
+    &__tertiary{
+        font-size: 18px;
+        color: rgb(151, 151, 151);
+    }
+    .angled-arrow{
+        margin-left: 15px;
+        margin-right: 15px;
+        color: rgb(165, 165, 165);
+    }
+    &__save-btn{
+        margin-left: auto;
+        background: rgb(28, 199, 93);
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        font-size: 17px;
+        padding: 13px 20px;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        width: 140px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 35px;
+        outline: none;
+        border: none;cursor: pointer;   
+    }
+}
+
+//layout
+.profile{
+    margin-top: 25px 20px;
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    position: relative;
+
+
+
+    .col-1{
+        flex-basis: 45%;
+    }
+    .col-2{
+        flex-basis: 55%;
+        padding-top: 15px;
+    }
+
+    &__img{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        div{
+            position: relative;
+        }
+        img{
+            width: 130px;
+            border-radius: 50%; 
+        }
+        span{
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            bottom: 6%;
+            right: 6%;
+            color: rgb(54, 219, 137);
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+    &__element{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 5px;
+        &:not(:last-child){
+            margin-bottom: 21px;
+        }
+        label{
+            margin-bottom: 8px;
+            color: rgb(116, 116, 116);
+            font-weight: 700;
+        }
+
+        input,select,option{
+            width: 90%;
+            padding: 8px 10px;
+            outline: none;
+            border: 1px ridge rgba(143, 143, 143, 0.274);
+            border-radius: 3px;
+            color: rgb(116, 116, 116);
+            font-weight: 700;
+        }
+    }
+    &__cancel{
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+        top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(107, 107, 107);
+        span{
+            margin-left: 10px;
+        }
+    }
+    &__password{
+        position: relative;
+    }
+    &__password span{
+        color: rgb(28, 199, 93);
+        position: absolute;
+        right: 12%;
+        top: 52%;
+        cursor: pointer;
+        font-weight: 700;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+
+}
+
+//individual styles
+.profile{
+    &__container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 21px;
+        
+        .margin__correction{
+            margin-bottom: 0;
+        }
+
+        
+    }
+    &__element{
+        flex-basis: 45%;
+    }
+
+    &__dob div{
+        display: flex;
+        select{
+            &:first-child{
+                width: 150px;
+            }
+            &:nth-child(2){
+                width: 85px;
+            }
+            &:last-child{
+                width: 100px;
+            }
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__payment{
+        border-radius: 5px;
+        border: 1px solid rgba(146, 146, 146, 0.281);
+        overflow: hidden;
+        &-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            height: 80px;
+        }
+        &-bot{
+            padding: 3px 15px 3px;
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px ridge rgba(146, 146, 146, 0.281);
+            span{
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: crimson;
+            }
+        }
+        &-img{
+            flex-basis: 30%;
+            img{
+                width: 100%;
+            }
+        }
+        &-info{
+            flex-basis: 60%;
+            margin-left: auto;
+
+            span{
+                color: rgb(119, 119, 119);
+                font-size: 18px;
+                font-weight: 700;
+                display: block;
+                &:last-child{
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+                
+            }
+        }
+        
+    }
+
+    &__addpayment{
+        flex-basis: 35%;
+        border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+        &-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            flex-wrap: wrap;
+            height: 70px;
+            width: 100%;
+
+        }
+        border: 1px solid rgba(146, 146, 146, 0.281);
+        .icon  {
+            color: rgba(109, 109, 109, 0.979);
+            font-size: 20px;
+            flex-basis: 5%;
+        }
+        .icon-info  {
+            color:rgb(28, 199, 93);
+            font-size: 15px;
+            margin-left: 10px;
+        }
+    }
+}
+
+

@@ -3,7 +3,7 @@
 - Ui Design Edit Profile
 - PHP mySQL Database
 - All Input Box are filled with Validation
-- Password are encrypeted with SHA-1
+- Password are encrypeted with SHA-1 AND MD5
 
 
 
